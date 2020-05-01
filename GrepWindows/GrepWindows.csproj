@@ -81,10 +81,6 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\BGA\BAL\bin\Debug\BAL.dll</HintPath>
-    </Reference>
     <Reference Include="CommandLine, Version=2.7.82.0, Culture=neutral, PublicKeyToken=5a870481e358d379, processorArchitecture=MSIL">
       <HintPath>..\packages\CommandLineParser.2.7.82\lib\net45\CommandLine.dll</HintPath>
       <Private>True</Private>
@@ -114,13 +110,6 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="Utils">
-      <HintPath>..\..\Utils\Utils\bin\Release\Utils.dll</HintPath>
-    </Reference>
-    <Reference Include="Utils.Windows, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Utils\Windows\bin\Release\Utils.Windows.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CheckedListBoxBindable.cs">
@@ -164,6 +153,7 @@
     <Compile Include="GrepResults.Designer.cs">
       <DependentUpon>GrepResults.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logger.cs" />
     <Compile Include="NamedPipes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -214,6 +204,9 @@
     <Compile Include="RegexHelp.Designer.cs">
       <DependentUpon>RegexHelp.cs</DependentUpon>
     </Compile>
+    <Compile Include="RichEditor.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="RtfUtility.cs" />
     <Compile Include="SearchManager.cs" />
     <Compile Include="SearchParameters.cs" />
@@ -223,6 +216,22 @@
     <Compile Include="SerializableBindingList.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="TabManager.cs" />
+    <Compile Include="TriStateCheckBoxTreeView.cs" />
+    <Compile Include="Utils\Extensions.cs" />
+    <Compile Include="Utils\IO\Constants.cs" />
+    <Compile Include="Utils\IO\DirectoryExt.cs" />
+    <Compile Include="Utils\IO\DirectorySearchOption.cs" />
+    <Compile Include="Utils\IO\FileCompare.cs" />
+    <Compile Include="Utils\IO\FileExt.cs" />
+    <Compile Include="Utils\IO\NameConflictOption.cs" />
+    <Compile Include="Utils\IO\PathExt.cs" />
+    <Compile Include="Utils\IO\XCopy.cs" />
+    <Compile Include="Utils\Mail.cs" />
+    <Compile Include="Utils\NumParser.cs" />
+    <Compile Include="Utils\ProcessProgress.cs" />
+    <Compile Include="Utils\Utils.cs" />
+    <Compile Include="Utils\Wildcard.cs" />
+    <Compile Include="Utils\Xml.cs" />
     <Compile Include="WCF.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,14 +1,53 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Drawing;
 using System.Text.RegularExpressions;
-using Smithgeek.Text.RegularExpressions;
-using Smithgeek.Log;
 
 namespace GrepWindows
 {
+	/// <summary>
+	/// Stubbed out log class 
+	/// </summary>
+	public class Log
+	{
+		public Log(string path)
+		{
+
+		}
+
+		public bool LoggingEnabled { get; set; }
+
+		public virtual string handleCommand(string command)
+		{
+			return string.Empty;
+		}
+
+		public void AddInfo(string message)
+		{
+
+		}
+
+		public void AddInfoFormat(String format, params object[] args)
+		{
+
+		}
+
+		public void AddData(Object obj, String objId, String info)
+		{
+		}
+
+		public void AddDataFormat(Object obj, String objId, String format, params object[] args)
+		{
+		}
+
+		public void AddError(string message)
+		{
+		}
+
+		public void AddErrorFormat(String format, params object[] args)
+		{
+
+		}
+	}
+
     /// <summary>
     /// Logger specific for the grep app. 
     /// </summary>
@@ -38,8 +77,8 @@ namespace GrepWindows
             {
                 sLog = new Logger(@"C:\Projects\Trash\output.log");
                 sLog.LoggingEnabled = false;
-                sLog.LogOutput = Log.Output.DebugWindow;
-                sLog.StackFrameIgnoreFiles.Add("Logger.cs");
+                //sLog.LogOutput = Log.Output.DebugWindow;
+                //sLog.StackFrameIgnoreFiles.Add("Logger.cs");
             }
             return sLog;
         }
@@ -65,7 +104,7 @@ namespace GrepWindows
                 case "track":
                     if (matches.Count == 2)
                     {
-                        Updater.WriteTrackFile(matches[1].Value);
+                        //Updater.WriteTrackFile(matches[1].Value);
                         output = "Track changed";
                     }
                     else

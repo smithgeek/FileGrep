@@ -204,7 +204,7 @@ namespace GrepWindows
         /// </summary>
         private void debugToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Logger.get().showDebugWindow();
+            //Logger.get().showDebugWindow();
         }
 
         /// <summary>
